@@ -111,14 +111,6 @@ This project embodies the philosophy of **"Breaking rules, creating beauty"**. I
 - Performance-optimized creative experiences
 - Accessibility in experimental design
 
-## 📊 Performance
-
-- **Lighthouse Score**: 95+ across all metrics
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-- **First Input Delay**: < 100ms
-
 ## 🔗 Connect With Me
 
 - **Portfolio**: [priyanshutech.xyz](https://www.priyanshutech.xyz)
@@ -152,7 +144,3 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-
