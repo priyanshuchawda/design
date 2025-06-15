@@ -1,0 +1,117 @@
+
+/* UTILITY CLASSES */
+
+.text-shadow-brutal {
+  text-shadow: 
+    2px 2px 0px #000,
+    4px 4px 0px #ff0080,
+    6px 6px 0px #00ff80;
+}
+
+.shadow-brutal {
+  box-shadow: 
+    4px 4px 0px #000,
+    8px 8px 0px rgba(255, 0, 128, 0.5),
+    12px 12px 0px rgba(0, 255, 128, 0.3);
+}
+
+.border-brutal {
+  border: 4px solid #000;
+  position: relative;
+}
+
+.border-brutal::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0080, #00ff80, #8000ff, #ffff00);
+  z-index: -1;
+}
+
+/* ANIMATIONS */
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border: 2px solid #ff0080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff0080, #00ff80);
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #00ff80, #8000ff);
+}
+
+/* RESPONSIVE UTILITIES */
+@media (max-width: 640px) {
+  .text-shadow-brutal {
+    text-shadow: 
+      1px 1px 0px #000,
+      2px 2px 0px #ff0080,
+      3px 3px 0px #00ff80;
+  }
+  
+  .shadow-brutal {
+    box-shadow: 
+      2px 2px 0px #000,
+      4px 4px 0px rgba(255, 0, 128, 0.5),
+      6px 6px 0px rgba(0, 255, 128, 0.3);
+  }
+}
+
+/* DESKTOP SPECIFIC OPTIMIZATIONS */
+@media (min-width: 1024px) {
+  .hover-enhance:hover {
+    transform: scale(1.05) rotate(1deg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl-spacing {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .xxl-spacing {
+    padding: 3rem;
+  }
+}

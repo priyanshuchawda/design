@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experimental Playground - Priyanshu Chawda | Creative Digital Experience</title>
+    <meta name="description" content="An immersive experimental showcase of creativity, motion, and digital artistry by Priyanshu Chawda. Experience interactive web design that pushes boundaries." />
+    <meta name="author" content="Priyanshu Chawda" />
+    <meta name="keywords" content="Priyanshu Chawda, experimental design, creative showcase, interactive web design, digital art, portfolio, web developer, creative technologist, GitHub, design playground" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://playground.priyanshutech.xyz" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://playground.priyanshutech.xyz" />
+    <meta property="og:title" content="Experimental Playground - Priyanshu Chawda | Creative Digital Experience" />
+    <meta property="og:description" content="An immersive experimental showcase of creativity, motion, and digital artistry by Priyanshu Chawda. Experience interactive web design that pushes boundaries." />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:site_name" content="Priyanshu Chawda - Creative Playground" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://playground.priyanshutech.xyz" />
+    <meta property="twitter:title" content="Experimental Playground - Priyanshu Chawda | Creative Digital Experience" />
+    <meta property="twitter:description" content="An immersive experimental showcase of creativity, motion, and digital artistry by Priyanshu Chawda. Experience interactive web design that pushes boundaries." />
+    <meta property="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="twitter:creator" content="@priyanshu_tech4" />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    
+    <!-- GitHub Repository Link -->
+    <link rel="alternate" type="application/rss+xml" title="GitHub Repository" href="https://github.com/priyanshuchawda/design" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Experimental Playground",
+      "description": "An immersive experimental showcase of creativity, motion, and digital artistry",
+      "creator": {
+        "@type": "Person",
+        "name": "Priyanshu Chawda",
+        "url": "https://priyanshutech.xyz",
+        "sameAs": [
+          "https://github.com/priyanshuchawda",
+          "https://linkedin.com/in/priyanshuchawda",
+          "https://twitter.com/priyanshu_tech4"
+        ]
+      },
+      "url": "https://playground.priyanshutech.xyz",
+      "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+      "codeRepository": "https://github.com/priyanshuchawda/design"
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    
+    <style>
+      /* Critical CSS for initial render */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: #000000;
+      }
+      
+      /* Loading animation */
+      .loading {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-spinner {
+        width: 60px;
+        height: 60px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        border-top: 3px solid #667eea;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Prevent flash of unstyled content */
+      #root {
+        min-height: 100vh;
+        background: #000000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Loading screen -->
+    <div id="loading" class="loading">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Performance optimizations
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            setTimeout(() => loading.remove(), 500);
+          }
+        }, 1000);
+      });
+      
+      // Disable right-click for immersive experience
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      
+      // Developer console messages
+      console.log('%c🎨 Experimental Playground by Priyanshu Chawda 🎨', 'color: #667eea; font-size: 24px; font-weight: bold;');
+      console.log('%cGitHub: https://github.com/priyanshuchawda/design', 'color: #764ba2; font-size: 16px;');
+      console.log('%cPortfolio: https://priyanshutech.xyz', 'color: #764ba2; font-size: 16px;');
+      console.log('%cLinkedIn: https://linkedin.com/in/priyanshuchawda', 'color: #764ba2; font-size: 16px;');
+      console.log('%cTwitter: https://twitter.com/priyanshu_tech4', 'color: #764ba2; font-size: 16px;');
+      console.log('%cThis showcase pushes the boundaries of web creativity and interaction.', 'color: #f093fb; font-size: 14px;');
+      
+      // Analytics ready (add your tracking code here)
+      // Google Analytics, Vercel Analytics, etc.
+    </script>
+  </body>
+</html>
